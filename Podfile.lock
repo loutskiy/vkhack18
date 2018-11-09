@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
+  - CardIO (5.4.1)
+  - HEREMaps (3.9.0)
+  - ObjectMapper (3.3.0)
+  - OneSignal (2.9.3)
+  - Realm (3.11.1):
+    - Realm/Headers (= 3.11.1)
+  - Realm/Headers (3.11.1)
+  - RealmSwift (3.11.1):
+    - Realm (= 3.11.1)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireObjectMapper
+  - CardIO
+  - HEREMaps
+  - ObjectMapper
+  - OneSignal (< 3.0, >= 2.6.2)
+  - RealmSwift
+  - SDWebImage (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - CardIO
+    - HEREMaps
+    - ObjectMapper
+    - OneSignal
+    - Realm
+    - RealmSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  HEREMaps: ce39da9e661d5c7358ae832d29107072b99f3738
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  OneSignal: a506e3bc61d2030f0757faf9bd783a9b211c6e3c
+  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+
+PODFILE CHECKSUM: d652dbaf80b530a822079e8185370e125aa3fd34
+
+COCOAPODS: 1.5.3

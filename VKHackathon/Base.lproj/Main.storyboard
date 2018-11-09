@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nXV-GH-DQg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Мои карты-->
+        <scene sceneID="h6j-OE-kCV">
+            <objects>
+                <tableViewController id="WVq-1J-sDi" customClass="MyCardsVC" customModule="VKHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dz0-4B-8Mg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="185" id="ayc-tn-y9D" customClass="CardCell" customModule="VKHackathon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayc-tn-y9D" id="Y1r-PY-Ljn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCL-v4-hdC">
+                                            <rect key="frame" x="16" y="11" width="343" height="163"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_default" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-lA-TGr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="163"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="163" id="qGG-0Q-pNg"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-dk-zew">
+                                                    <rect key="frame" x="16" y="8" width="48" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="e0N-2G-j3K"/>
+                                                        <constraint firstAttribute="height" constant="40" id="hfr-vs-YUQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4v-Qp-flB">
+                                                    <rect key="frame" x="294" y="8" width="33" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="33" id="Qhi-oU-8Pg"/>
+                                                        <constraint firstAttribute="height" constant="40" id="k1H-cO-WD9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05 / 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-mX-NdJ">
+                                                    <rect key="frame" x="272" y="126" width="55" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Bank of Moscow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNd-B1-Muk">
+                                                    <rect key="frame" x="16" y="126" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-k7-vhB">
+                                                    <rect key="frame" x="272" y="106" width="33" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.54509803921568623" green="0.55686274509803924" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5432     111**     ****     ****" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-Fc-qwT">
+                                                    <rect key="frame" x="58.5" y="70" width="226.5" height="23"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="9Xa-dk-zew" firstAttribute="top" secondItem="iCL-v4-hdC" secondAttribute="top" constant="8" id="37Z-tv-CRu"/>
+                                                <constraint firstItem="Aau-Fc-qwT" firstAttribute="centerX" secondItem="iCL-v4-hdC" secondAttribute="centerX" id="7hA-Xi-0qz"/>
+                                                <constraint firstItem="rc0-mX-NdJ" firstAttribute="leading" secondItem="0Bo-k7-vhB" secondAttribute="leading" id="GPA-uA-Nq0"/>
+                                                <constraint firstAttribute="bottom" secondItem="rc0-mX-NdJ" secondAttribute="bottom" constant="16" id="Ga1-wc-ctq"/>
+                                                <constraint firstAttribute="trailing" secondItem="l4v-Qp-flB" secondAttribute="trailing" constant="16" id="IJw-LF-3ea"/>
+                                                <constraint firstAttribute="trailing" secondItem="hUu-lA-TGr" secondAttribute="trailing" id="Lfd-H0-utS"/>
+                                                <constraint firstAttribute="bottom" secondItem="sNd-B1-Muk" secondAttribute="bottom" constant="16" id="S27-l1-7W9"/>
+                                                <constraint firstItem="hUu-lA-TGr" firstAttribute="leading" secondItem="iCL-v4-hdC" secondAttribute="leading" id="Swn-ni-3ZG"/>
+                                                <constraint firstItem="sNd-B1-Muk" firstAttribute="leading" secondItem="iCL-v4-hdC" secondAttribute="leading" constant="16" id="W3L-wM-ix4"/>
+                                                <constraint firstItem="hUu-lA-TGr" firstAttribute="top" secondItem="iCL-v4-hdC" secondAttribute="top" id="cM3-1a-iAQ"/>
+                                                <constraint firstItem="Aau-Fc-qwT" firstAttribute="centerY" secondItem="iCL-v4-hdC" secondAttribute="centerY" id="otd-j6-E0F"/>
+                                                <constraint firstItem="l4v-Qp-flB" firstAttribute="top" secondItem="iCL-v4-hdC" secondAttribute="top" constant="8" id="rOT-4K-wFW"/>
+                                                <constraint firstItem="rc0-mX-NdJ" firstAttribute="top" secondItem="0Bo-k7-vhB" secondAttribute="bottom" constant="6" id="rii-y3-wgZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="hUu-lA-TGr" secondAttribute="bottom" id="sET-Hk-clr"/>
+                                                <constraint firstItem="9Xa-dk-zew" firstAttribute="leading" secondItem="iCL-v4-hdC" secondAttribute="leading" constant="16" id="vbK-bw-yPe"/>
+                                                <constraint firstAttribute="trailing" secondItem="rc0-mX-NdJ" secondAttribute="trailing" constant="16" id="xaA-tm-V6N"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iCL-v4-hdC" firstAttribute="trailing" secondItem="Y1r-PY-Ljn" secondAttribute="trailingMargin" id="AMl-CV-61j"/>
+                                        <constraint firstItem="iCL-v4-hdC" firstAttribute="top" secondItem="Y1r-PY-Ljn" secondAttribute="topMargin" id="Bl7-Dp-cq5"/>
+                                        <constraint firstItem="iCL-v4-hdC" firstAttribute="bottom" secondItem="Y1r-PY-Ljn" secondAttribute="bottomMargin" id="MgH-ZV-xgg"/>
+                                        <constraint firstItem="iCL-v4-hdC" firstAttribute="leading" secondItem="Y1r-PY-Ljn" secondAttribute="leadingMargin" id="hbj-TV-GVU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bankLabel" destination="sNd-B1-Muk" id="DgQ-Kb-zF4"/>
+                                    <outlet property="cardNumberLabel" destination="Aau-Fc-qwT" id="k34-t6-nUR"/>
+                                    <outlet property="currencyLabel" destination="l4v-Qp-flB" id="ycP-gJ-YY3"/>
+                                    <outlet property="expiryLabel" destination="rc0-mX-NdJ" id="EQI-T5-ydA"/>
+                                    <outlet property="viewCard" destination="iCL-v4-hdC" id="oxm-hw-rQw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WVq-1J-sDi" id="lCw-Z0-Zjm"/>
+                            <outlet property="delegate" destination="WVq-1J-sDi" id="POg-am-FpY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои карты" id="ZKV-DK-MQH">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="add" id="54a-dY-zd7">
+                            <connections>
+                                <segue destination="a92-hX-yw9" kind="show" id="MWD-4Q-Qpv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXz-LP-OfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951.2" y="118.29085457271366"/>
+        </scene>
+        <!--Add CardVC-->
+        <scene sceneID="t4g-te-qbM">
+            <objects>
+                <viewController storyboardIdentifier="AddCardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a92-hX-yw9" customClass="AddCardVC" customModule="VKHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cq3-xa-QOX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiF-MG-GeP">
+                                <rect key="frame" x="16" y="79" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="scanCard:" destination="a92-hX-yw9" eventType="touchUpInside" id="BDL-LE-MfS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AxJ-K8-Dzb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORW-Cm-bCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2717.5999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Мои карты-->
+        <scene sceneID="OiM-Sh-GX0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfK-65-oEw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Мои карты" image="credit-card" id="d2P-va-8w9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="paz-DZ-4vM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.089187092509328436" green="0.140260796802363" blue="0.2165641191709845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WVq-1J-sDi" kind="relationship" relationship="rootViewController" id="G7n-94-LCs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hq9-Oi-Fhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="118.29085457271366"/>
+        </scene>
+        <!--Банкоматы-->
+        <scene sceneID="3Fu-0y-PQ1">
+            <objects>
+                <viewController id="wYa-Rl-BV6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1n-ip-OtH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scw-cL-aqf" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="scw-cL-aqf" firstAttribute="trailing" secondItem="A4q-Xb-eCA" secondAttribute="trailing" id="3kG-GG-dwI"/>
+                            <constraint firstItem="scw-cL-aqf" firstAttribute="leading" secondItem="A4q-Xb-eCA" secondAttribute="leading" id="L6v-Bw-Ls7"/>
+                            <constraint firstItem="scw-cL-aqf" firstAttribute="top" secondItem="N1n-ip-OtH" secondAttribute="top" id="Sra-LO-hbI"/>
+                            <constraint firstAttribute="bottom" secondItem="scw-cL-aqf" secondAttribute="bottom" id="ZSf-WR-1g3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4q-Xb-eCA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Банкоматы" id="oQ8-A2-q98"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QxN-5p-b6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888.8000000000002" y="874.81259370314854"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="laE-5e-eDH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nXV-GH-DQg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S7P-io-sjx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qfK-65-oEw" kind="relationship" relationship="viewControllers" id="k35-ut-cAs"/>
+                        <segue destination="nKY-xB-9Ws" kind="relationship" relationship="viewControllers" id="jgk-jk-vw0"/>
+                        <segue destination="yLd-kr-Hm3" kind="relationship" relationship="viewControllers" id="37p-Aj-dW0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxP-7f-Hkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="118.29085457271366"/>
+        </scene>
+        <!--Снять наличные-->
+        <scene sceneID="Xvv-yv-4b1">
+            <objects>
+                <viewController id="5K3-fQ-1m4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ub7-hK-unS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ilm-ib-GGX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Снять наличные" id="Kjo-2B-Y0X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAB-Qb-IUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215.2" y="1125.7871064467768"/>
+        </scene>
+        <!--Банкоматы-->
+        <scene sceneID="nKU-Yj-G2p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nKY-xB-9Ws" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Банкоматы" image="map" id="jy7-Sx-wZT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="99V-Sg-g1i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wYa-Rl-BV6" kind="relationship" relationship="rootViewController" id="DXd-5i-l0I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCf-YK-rdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951.2" y="873.91304347826099"/>
+        </scene>
+        <!--Снять наличные-->
+        <scene sceneID="eDn-ze-ndH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yLd-kr-Hm3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Снять наличные" image="money" id="sRv-QB-Nvb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wy0-c9-LdP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5K3-fQ-1m4" kind="relationship" relationship="rootViewController" id="o00-of-pfo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRv-al-Cpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="1125.7871064467768"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="20" height="20"/>
+        <image name="card_default" width="594" height="364"/>
+        <image name="credit-card" width="24" height="19"/>
+        <image name="map" width="24" height="19"/>
+        <image name="mastercard" width="73" height="60"/>
+        <image name="money" width="24" height="14"/>
+    </resources>
+</document>

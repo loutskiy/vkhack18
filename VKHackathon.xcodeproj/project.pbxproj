@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148A40497AA54F73DD4C520B /* Pods_VKHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C509155E1D0B59B80B599462 /* Pods_VKHackathon.framework */; };
+		7D501B14666B891F235767BA /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C95F5FDCFBB6FA758405D4E /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		A7F7CB622195A93B004C1501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB612195A93B004C1501 /* AppDelegate.swift */; };
+		A7F7CB642195A93B004C1501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB632195A93B004C1501 /* ViewController.swift */; };
+		A7F7CB672195A93B004C1501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F7CB652195A93B004C1501 /* Main.storyboard */; };
+		A7F7CB692195A93E004C1501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F7CB682195A93E004C1501 /* Assets.xcassets */; };
+		A7F7CB6C2195A93E004C1501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F7CB6A2195A93E004C1501 /* LaunchScreen.storyboard */; };
+		A7F7CB7A2195F584004C1501 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB792195F584004C1501 /* NotificationService.swift */; };
+		A7F7CB7E2195F584004C1501 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7F7CB772195F583004C1501 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7F7CB872195F8EF004C1501 /* AddCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB862195F8EF004C1501 /* AddCardVC.swift */; };
+		A7F7CB8A2195FE15004C1501 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB892195FE15004C1501 /* MapVC.swift */; };
+		A7F7CB8D21961AF5004C1501 /* AddCartCam.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB8C21961AF5004C1501 /* AddCartCam.m */; };
+		A7F7CB8F21962098004C1501 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB8E21962098004C1501 /* CardModel.swift */; };
+		A7F7CB9121962250004C1501 /* MyCardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB9021962250004C1501 /* MyCardsVC.swift */; };
+		A7F7CB9321962531004C1501 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB9221962531004C1501 /* CardCell.swift */; };
+		A7F7CB952196312A004C1501 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB942196312A004C1501 /* ServerManager.swift */; };
+		A7F7CB97219631F3004C1501 /* BinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7CB96219631F3004C1501 /* BinModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7F7CB7C2195F584004C1501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7F7CB562195A93B004C1501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F7CB762195F583004C1501;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7F7CB822195F584004C1501 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A7F7CB7E2195F584004C1501 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C95F5FDCFBB6FA758405D4E /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		481373B861EF9BBD6FEE78B7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		751414F2458F2C8F763F70B6 /* Pods-VKHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKHackathon/Pods-VKHackathon.release.xcconfig"; sourceTree = "<group>"; };
+		A7F7CB5E2195A93B004C1501 /* VKHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F7CB612195A93B004C1501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7F7CB632195A93B004C1501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7F7CB662195A93B004C1501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7F7CB682195A93E004C1501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7F7CB6B2195A93E004C1501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7F7CB6D2195A93E004C1501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7F7CB772195F583004C1501 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F7CB792195F584004C1501 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A7F7CB7B2195F584004C1501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7F7CB832195F63B004C1501 /* VKHackathon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VKHackathon.entitlements; sourceTree = "<group>"; };
+		A7F7CB862195F8EF004C1501 /* AddCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardVC.swift; sourceTree = "<group>"; };
+		A7F7CB882195FB78004C1501 /* VKHackathon-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKHackathon-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7F7CB892195FE15004C1501 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		A7F7CB8B21961AF5004C1501 /* AddCartCam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCartCam.h; sourceTree = "<group>"; };
+		A7F7CB8C21961AF5004C1501 /* AddCartCam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCartCam.m; sourceTree = "<group>"; };
+		A7F7CB8E21962098004C1501 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		A7F7CB9021962250004C1501 /* MyCardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsVC.swift; sourceTree = "<group>"; };
+		A7F7CB9221962531004C1501 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		A7F7CB942196312A004C1501 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		A7F7CB96219631F3004C1501 /* BinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinModel.swift; sourceTree = "<group>"; };
+		C509155E1D0B59B80B599462 /* Pods_VKHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E646F19B8BE42FE6619B779B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F348319301B395FBE4F5BBF0 /* Pods-VKHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKHackathon/Pods-VKHackathon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7F7CB5B2195A93B004C1501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148A40497AA54F73DD4C520B /* Pods_VKHackathon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F7CB742195F583004C1501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D501B14666B891F235767BA /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AE78268B767B0D34A32E81B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C509155E1D0B59B80B599462 /* Pods_VKHackathon.framework */,
+				1C95F5FDCFBB6FA758405D4E /* Pods_OneSignalNotificationServiceExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7F7CB552195A93B004C1501 = {
+			isa = PBXGroup;
+			children = (
+				A7F7CB602195A93B004C1501 /* VKHackathon */,
+				A7F7CB782195F584004C1501 /* OneSignalNotificationServiceExtension */,
+				A7F7CB5F2195A93B004C1501 /* Products */,
+				B9D4ADFF76A1BECEAC9CB380 /* Pods */,
+				6AE78268B767B0D34A32E81B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A7F7CB5F2195A93B004C1501 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7F7CB5E2195A93B004C1501 /* VKHackathon.app */,
+				A7F7CB772195F583004C1501 /* OneSignalNotificationServiceExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7F7CB602195A93B004C1501 /* VKHackathon */ = {
+			isa = PBXGroup;
+			children = (
+				A7F7CB832195F63B004C1501 /* VKHackathon.entitlements */,
+				A7F7CB612195A93B004C1501 /* AppDelegate.swift */,
+				A7F7CB632195A93B004C1501 /* ViewController.swift */,
+				A7F7CB9021962250004C1501 /* MyCardsVC.swift */,
+				A7F7CB9221962531004C1501 /* CardCell.swift */,
+				A7F7CB862195F8EF004C1501 /* AddCardVC.swift */,
+				A7F7CB892195FE15004C1501 /* MapVC.swift */,
+				A7F7CB8B21961AF5004C1501 /* AddCartCam.h */,
+				A7F7CB8C21961AF5004C1501 /* AddCartCam.m */,
+				A7F7CB882195FB78004C1501 /* VKHackathon-Swift-Bridging-Header.h */,
+				A7F7CB942196312A004C1501 /* ServerManager.swift */,
+				A7F7CB8E21962098004C1501 /* CardModel.swift */,
+				A7F7CB96219631F3004C1501 /* BinModel.swift */,
+				A7F7CB652195A93B004C1501 /* Main.storyboard */,
+				A7F7CB682195A93E004C1501 /* Assets.xcassets */,
+				A7F7CB6A2195A93E004C1501 /* LaunchScreen.storyboard */,
+				A7F7CB6D2195A93E004C1501 /* Info.plist */,
+			);
+			path = VKHackathon;
+			sourceTree = "<group>";
+		};
+		A7F7CB782195F584004C1501 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A7F7CB792195F584004C1501 /* NotificationService.swift */,
+				A7F7CB7B2195F584004C1501 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		B9D4ADFF76A1BECEAC9CB380 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F348319301B395FBE4F5BBF0 /* Pods-VKHackathon.debug.xcconfig */,
+				751414F2458F2C8F763F70B6 /* Pods-VKHackathon.release.xcconfig */,
+				E646F19B8BE42FE6619B779B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				481373B861EF9BBD6FEE78B7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7F7CB5D2195A93B004C1501 /* VKHackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F7CB702195A93E004C1501 /* Build configuration list for PBXNativeTarget "VKHackathon" */;
+			buildPhases = (
+				68CEA5A1AD75EA2BB7676A3B /* [CP] Check Pods Manifest.lock */,
+				A7F7CB5A2195A93B004C1501 /* Sources */,
+				A7F7CB5B2195A93B004C1501 /* Frameworks */,
+				A7F7CB5C2195A93B004C1501 /* Resources */,
+				B9877A23D43E784B6960C4DC /* [CP] Embed Pods Frameworks */,
+				A7F7CB822195F584004C1501 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7F7CB7D2195F584004C1501 /* PBXTargetDependency */,
+			);
+			name = VKHackathon;
+			productName = VKHackathon;
+			productReference = A7F7CB5E2195A93B004C1501 /* VKHackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7F7CB762195F583004C1501 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F7CB7F2195F584004C1501 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				5EC1BFEECCDFF2DDA53E513D /* [CP] Check Pods Manifest.lock */,
+				A7F7CB732195F583004C1501 /* Sources */,
+				A7F7CB742195F583004C1501 /* Frameworks */,
+				A7F7CB752195F583004C1501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = A7F7CB772195F583004C1501 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7F7CB562195A93B004C1501 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mikhail Lutskii";
+				TargetAttributes = {
+					A7F7CB5D2195A93B004C1501 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					A7F7CB762195F583004C1501 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A7F7CB592195A93B004C1501 /* Build configuration list for PBXProject "VKHackathon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7F7CB552195A93B004C1501;
+			productRefGroup = A7F7CB5F2195A93B004C1501 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7F7CB5D2195A93B004C1501 /* VKHackathon */,
+				A7F7CB762195F583004C1501 /* OneSignalNotificationServiceExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7F7CB5C2195A93B004C1501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F7CB6C2195A93E004C1501 /* LaunchScreen.storyboard in Resources */,
+				A7F7CB692195A93E004C1501 /* Assets.xcassets in Resources */,
+				A7F7CB672195A93B004C1501 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F7CB752195F583004C1501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EC1BFEECCDFF2DDA53E513D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68CEA5A1AD75EA2BB7676A3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKHackathon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9877A23D43E784B6960C4DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VKHackathon/Pods-VKHackathon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${PODS_ROOT}/HEREMaps/framework/NMAKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NMAKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKHackathon/Pods-VKHackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7F7CB5A2195A93B004C1501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F7CB8D21961AF5004C1501 /* AddCartCam.m in Sources */,
+				A7F7CB872195F8EF004C1501 /* AddCardVC.swift in Sources */,
+				A7F7CB8A2195FE15004C1501 /* MapVC.swift in Sources */,
+				A7F7CB9321962531004C1501 /* CardCell.swift in Sources */,
+				A7F7CB642195A93B004C1501 /* ViewController.swift in Sources */,
+				A7F7CB622195A93B004C1501 /* AppDelegate.swift in Sources */,
+				A7F7CB8F21962098004C1501 /* CardModel.swift in Sources */,
+				A7F7CB952196312A004C1501 /* ServerManager.swift in Sources */,
+				A7F7CB9121962250004C1501 /* MyCardsVC.swift in Sources */,
+				A7F7CB97219631F3004C1501 /* BinModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F7CB732195F583004C1501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F7CB7A2195F584004C1501 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7F7CB7D2195F584004C1501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7F7CB762195F583004C1501 /* OneSignalNotificationServiceExtension */;
+			targetProxy = A7F7CB7C2195F584004C1501 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7F7CB652195A93B004C1501 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F7CB662195A93B004C1501 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7F7CB6A2195A93E004C1501 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F7CB6B2195A93E004C1501 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7F7CB6E2195A93E004C1501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7F7CB6F2195A93E004C1501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7F7CB712195A93E004C1501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F348319301B395FBE4F5BBF0 /* Pods-VKHackathon.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VKHackathon/VKHackathon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YBKQD6YZD;
+				INFOPLIST_FILE = VKHackathon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lwts.VKHackathon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKHackathon/VKHackathon-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7F7CB722195A93E004C1501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 751414F2458F2C8F763F70B6 /* Pods-VKHackathon.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VKHackathon/VKHackathon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YBKQD6YZD;
+				INFOPLIST_FILE = VKHackathon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lwts.VKHackathon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKHackathon/VKHackathon-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A7F7CB802195F584004C1501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E646F19B8BE42FE6619B779B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YBKQD6YZD;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lwts.VKHackathon.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7F7CB812195F584004C1501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481373B861EF9BBD6FEE78B7 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YBKQD6YZD;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lwts.VKHackathon.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7F7CB592195A93B004C1501 /* Build configuration list for PBXProject "VKHackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F7CB6E2195A93E004C1501 /* Debug */,
+				A7F7CB6F2195A93E004C1501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F7CB702195A93E004C1501 /* Build configuration list for PBXNativeTarget "VKHackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F7CB712195A93E004C1501 /* Debug */,
+				A7F7CB722195A93E004C1501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F7CB7F2195F584004C1501 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F7CB802195F584004C1501 /* Debug */,
+				A7F7CB812195F584004C1501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7F7CB562195A93B004C1501 /* Project object */;
+}
