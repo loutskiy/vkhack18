@@ -18,7 +18,11 @@ target 'SiriIntent' do
   use_frameworks!
   pod 'RealmSwift'
 end
-
+target 'SiriIntentUI' do
+  use_frameworks!
+  pod 'RealmSwift'
+  pod 'SDWebImage', '~> 4.0'
+end
 target 'OneSignalNotificationServiceExtension' do
   use_frameworks!
   pod 'OneSignal', '>= 2.6.2', '< 3.0'

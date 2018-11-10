@@ -38,7 +38,7 @@ class LocationModel: Mappable {
         work_time <- map["work_time"]
         currency <- map["currency"]
         cashless <- map["cashless"]
-        IsMerchant <- map["IsMerchant"]
+        IsMerchant <- map["is_merchant"]
         address <- map["address"]
         bank_id <- map["bank_id"]
     }

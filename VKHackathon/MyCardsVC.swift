@@ -17,7 +17,8 @@ class MyCardsVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationTrackerSingleton.shared.sendingToServer()
-        setupIntents()
+        donateInteraction()
+//        setupIntents()
         INPreferences.requestSiriAuthorization { (status) in
         }
         self.tableView.tableFooterView = UIView()
@@ -29,16 +30,41 @@ class MyCardsVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func setupIntents() {
-        let activity = NSUserActivity(activityType: "ru.lwts.VKHackathon.SiriShourtcuts.say") // 1
-        activity.title = "Say Hi" // 2
-        activity.userInfo = ["speech" : "hi"] // 3
-        activity.isEligibleForSearch = true // 4
-        activity.isEligibleForPrediction = true // 5
-        activity.persistentIdentifier = "ru.lwts.VKHackathon.SiriShourtcuts.say" // 6
-        view.userActivity = activity // 7
-        activity.becomeCurrent() // 8
+    func donateInteraction() {
+        let intent = FindAtmIntent()
+        
+        intent.suggestedInvocationPhrase = "Хочу снять деньги с карты сбербанк в рублях"
+        intent.bank = "сбербанк"
+        intent.currency = "долларах"
+        
+        let interaction = INInteraction(intent: intent, response: nil)
+        
+        interaction.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
     }
+//
+//    func setupIntents() {
+//        for bank in Banks.banks {
+//            for currency in Banks.currency {
+//                print(bank.key + currency)
+//                let activity = NSUserActivity(activityType: bank.key + currency) // 1
+//                activity.title = bank.value.name + " " + currency // 2
+//                activity.userInfo = ["speech" : "Привет " + bank.value.name + " " + currency] // 3
+//                activity.isEligibleForSearch = true // 4
+//                activity.isEligibleForPrediction = true // 5
+//                activity.persistentIdentifier = bank.key + currency // 6
+//                view.userActivity = activity // 7
+//                activity.becomeCurrent() // 8
+//            }
+//        }
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -57,6 +83,16 @@ class MyCardsVC: UITableViewController {
         cell.cardNumberLabel.text = card.cardId.inserting(separator: "    ", every: 4)
         cell.expiryLabel.text = card.cardExpire
         cell.bankLabel.text = Banks.banks[card.bankName]?.name ?? ""
+        switch card.cardCurrency {
+        case "RUB":
+            cell.currencyLabel.text = "₽"
+        case "USD":
+            cell.currencyLabel.text = "$"
+        case "EUR":
+            cell.currencyLabel.text = "€"
+        default:
+            cell.currencyLabel.text = "₽"
+        }
         if card.cardType == "Gold" {
             cell.cardHoldImage.image = #imageLiteral(resourceName: "card_gold")
         }
@@ -65,25 +101,37 @@ class MyCardsVC: UITableViewController {
         return cell
     }
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            try! realm.write {
+                realm.delete(cards![indexPath.row])
+            }
+        
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = cards![indexPath.row]
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+        vc.isNeedFilter = true
+        vc.bankName = card.bankName
+        vc.currency = card.cardCurrency
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // Override to support rearranging the table view.

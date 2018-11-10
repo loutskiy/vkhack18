@@ -41,10 +41,22 @@
 	<string>Siri</string>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string></string>
+		<string>COMMERCIAL INNOVATION BANK ALFA-BANKEUR</string>
+		<string>COMMERCIAL INNOVATION BANK ALFA-BANKRUB</string>
+		<string>COMMERCIAL INNOVATION BANK ALFA-BANKUSD</string>
+		<string>CREDIT BANK OF MOSCOWEUR</string>
+		<string>CREDIT BANK OF MOSCOWRUB</string>
+		<string>CREDIT BANK OF MOSCOWUSD</string>
 		<string>FindAtmIntent</string>
-		<string>Intents</string>
-		<string>ru.lwts.VKHackathon.SiriShourtcuts.say</string>
+		<string>JSCB MOSCOW INDUSTRIAL BANKEUR</string>
+		<string>JSCB MOSCOW INDUSTRIAL BANKRUB</string>
+		<string>JSCB MOSCOW INDUSTRIAL BANKUSD</string>
+		<string>SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)EUR</string>
+		<string>SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)RUB</string>
+		<string>SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)USD</string>
+		<string>TINKOFF CREDIT SYSTEMS BANK (CJSC)EUR</string>
+		<string>TINKOFF CREDIT SYSTEMS BANK (CJSC)RUB</string>
+		<string>TINKOFF CREDIT SYSTEMS BANK (CJSC)USD</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

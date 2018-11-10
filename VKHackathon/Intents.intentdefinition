@@ -16,7 +16,7 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>search</string>
+			<string>information</string>
 			<key>INIntentDescription</key>
 			<string>Find</string>
 			<key>INIntentDescriptionID</key>
@@ -30,7 +30,7 @@
 				<key>currency,bank</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
-					<false/>
+					<true/>
 					<key>INIntentParameterCombinationSubtitle</key>
 					<string></string>
 					<key>INIntentParameterCombinationSubtitleID</key>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Хочу снять деньги с ${bank} в ${currency}</string>
+					<string>Хочу снять деньги с карты ${bank} в ${currency}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>D6jKK9</string>
 				</dict>
@@ -106,9 +106,22 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>INIntentResponseParameters</key>
-				<array/>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>title</string>
+						<key>INIntentResponseParameterSupportsMultipleValues</key>
+						<false/>
+						<key>INIntentResponseParameterTag</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
 			</dict>
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
@@ -121,7 +134,7 @@
 			<key>INIntentUserConfirmationRequired</key>
 			<true/>
 			<key>INIntentVerb</key>
-			<string>Find</string>
+			<string>Open</string>
 		</dict>
 	</array>
 </dict>

@@ -16,12 +16,19 @@ class GetMoney: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var data: Results<CardModel>?
     
+    var checkedId = [IndexPath]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         data = realm.objects(CardModel.self)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
     }
     
     @IBAction func changeTracking(_ sender: UISwitch) {
@@ -43,6 +50,9 @@ class GetMoney: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationTrackerSingleton.shared.sendingToServer()
     }
     
+    @IBAction func changeMerchant(_ sender: Any) {
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (data?.count)!
     }
@@ -51,7 +61,23 @@ class GetMoney: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let card = data![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GetMoneyCell
         cell.titleField.text = card.cardId.inserting(separator: "    ", every: 4)
+        if checkedId.contains(indexPath) {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if checkedId.contains(indexPath) {
+            checkedId.removeAll()
+        } else {
+            checkedId.removeAll()
+            checkedId.append(indexPath)
+        }
+        tableView.reloadData()
     }
     
     /*

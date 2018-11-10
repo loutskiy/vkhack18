@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        Migration.applyMigration()
+
         let kHelloMapAppID = "fwDWDINdcDi9PzFeiUGr"
         let kHelloMapAppCode = "no2BYFddc6ZZ6o3puOyG1Q"
         let kHelloMapLicenseKey = "BRW6LrIp65YzRdw7sGTmrT6SaPmRA5n1pYdL5Ou8f2kNfm/Su2AVSoznMUupj311ku94LfQhjLvoL+Xquq7LrDr91NnMMLw2hX5rThKMHvGR3UyJH9X/hLK/uub8ER+I5Te2efBjQDnlNZiGl4ZlxZ9NTYIFFwbsOVdBOAi1ouibO1X7d2oIgTbveT5lCaMhcrwk8L1OGv7c2qHTU5GY2sNcuIO7hBOxG8D6hN0ibrsCmFL78voLboJBQwynVKN4AekR5/8wvCHKHdA6QZsN0cvflYmDFnWPfq2Suuxssn/mGAt3cxdApU2zTcS3xPgjyEM2zdXEpnBhNxNlcOD8Wh61hcYY+0DyvZ67Lbv2jvylW8iPeJRTp+MgozsXX95Qkzn13du5ZZyZmC4bHZ99MBu61XvC6XP+/9+rxRHpmdyFHYIEUZEzriOXO5Z6MfR8MgNs4n+2Bj3vlopy+mIuEdvcVvRXW5dguyK2KIAmKBdG1F23IDegghnWtMKXpefzo8L32/vSVTVCyib7qr1Rj1H5IxpDG0aXW8DV1sn70fCCBX6Z5PlrvvS/Xut7q2O1yJ9D6ggSjTZwpQyt8Vg+dS+iVbdmxxuQtSL95UU5APWR+erqkdBg2Lma3lEvb0sAb7LNgoBAe4tQEjaRmpppEJdo8jxgue5DFx95mQIbdeI="
@@ -71,10 +72,71 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        print("3345")
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard
+            userActivity.interaction?.intent is FindAtmIntent,
+            let window = window,
+            let rootViewController = window.rootViewController as? UITabBarController
+            else {
+                print("error")
+                return false
+        }
+        print("go")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+        (rootViewController.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
+        vc.openBank()
         return true
     }
 
 }
 
+extension UIColor {
+    
+    /// This convenience for UIColor extended init for easy using rgb
+    ///
+    /// - Parameters:
+    ///   - red: red int
+    ///   - green: green int
+    ///   - blue: blue int
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    /// This convenience for UIColor extended init for easy using rgb
+    ///
+    /// - Parameter rgb: hex color
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+    
+    /// This convenience for UIColor extended init for easy using rgba
+    ///
+    /// - Parameters:
+    ///   - red: red int
+    ///   - green: green int
+    ///   - blue: blue int
+    ///   - alpha: alpha cgfloat
+    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        assert(alpha >= 0.0 && alpha <= 1.0, "Invalid alpha component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
+    }
+    
+    convenience init(rgb: Int, alpha: CGFloat) {
+        self.init(red: (rgb >> 16) & 0xFF, green: (rgb >> 8) & 0xFF, blue: rgb & 0xFF, alpha: alpha)
+    }
+    
+    static let VKOurColor = UIColor(rgb: 0x172437)
+}

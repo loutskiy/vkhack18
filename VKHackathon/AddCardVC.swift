@@ -10,6 +10,7 @@ import UIKit
 
 
 class AddCardVC: UIViewController, CardIOPaymentViewControllerDelegate {
+    @IBOutlet weak var currencySegment: UISegmentedControl!
     func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
         paymentViewController?.dismiss(animated: true, completion: nil)
     }
@@ -21,6 +22,18 @@ class AddCardVC: UIViewController, CardIOPaymentViewControllerDelegate {
                 card.bankName = (bin.bank?.name)!
                 card.cardExpire = "\(info.expiryMonth)/\(info.expiryYear)"
                 card.cardId = info.cardNumber
+                var currency = "RUB"
+                switch self.currencySegment.selectedSegmentIndex {
+                case 0:
+                    currency = "RUB"
+                case 1:
+                    currency = "USD"
+                case 2:
+                    currency = "EUR"
+                default:
+                    currency = "RUB"
+                }
+                card.cardCurrency = currency
                 card.cardType = bin.brand ?? "Standart"
                 try! realm.write {
                     realm.add(card)
@@ -31,6 +44,7 @@ class AddCardVC: UIViewController, CardIOPaymentViewControllerDelegate {
             //resultLabel.text = str as String
         }
         paymentViewController?.dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
     
 

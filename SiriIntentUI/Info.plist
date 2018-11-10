@@ -26,6 +26,7 @@
 		<dict>
 			<key>IntentsSupported</key>
 			<array>
+				<string>FindAtmIntent</string>
 				<string>INSendMessageIntent</string>
 			</array>
 		</dict>

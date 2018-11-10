@@ -33,7 +33,7 @@
 "Kjo-2B-Y0X.title" = "Снять наличные";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SiF-MG-GeP"; */
-"SiF-MG-GeP.normalTitle" = "Button";
+"SiF-MG-GeP.normalTitle" = "Внести данные";
 
 /* Class = "UINavigationItem"; title = "Мои карты"; ObjectID = "ZKV-DK-MQH"; */
 "ZKV-DK-MQH.title" = "Мои карты";
@@ -69,4 +69,4 @@
 "teu-2o-6qq.text" = "Выберите валюту для снятия";
 
 /* Class = "UILabel"; text = "Информировать о найденном банкомате"; ObjectID = "xlM-Jn-BB3"; */
-"xlM-Jn-BB3.text" = "Информировать о найденном банкомате";
+"xlM-Jn-BB3.text" = "Банкомат поблизовсти";

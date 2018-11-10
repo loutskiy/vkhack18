@@ -7,7 +7,7 @@
 //
 
 import IntentsUI
-
+import SDWebImage
 // As an example, this extension's Info.plist has been configured to handle interactions for INSendMessageIntent.
 // You will want to replace this or add other intents as appropriate.
 // The intents whose interactions you wish to handle must be declared in the extension's Info.plist.
@@ -17,8 +17,10 @@ import IntentsUI
 
 class IntentViewController: UIViewController, INUIHostedViewControlling {
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.sd_setImage(with: URL(string: "https://image.maps.api.here.com/mia/1.6/mapview?c=59.95247471691382%2C30.299606323242188&z=14&app_id=PIIS8aPnSq4cCgV5alOQ&app_code=HogN5Tpa55dcny-X6-eYDQ")!, completed: nil)
         // Do any additional setup after loading the view.
     }
         
@@ -34,4 +36,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         return self.extensionContext!.hostedViewMaximumAllowedSize
     }
     
+    @IBAction func directionAction(_ sender: Any) {
+        print("tree")
+    }
 }
