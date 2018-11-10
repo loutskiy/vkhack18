@@ -35,7 +35,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, NMAMapViewDelegate, UI
         mapView.positionIndicator.isVisible = true
         mapView.delegate = self
         mapView.zoomLevel = 13.2
-        mapView.set(geoCenter: NMAGeoCoordinates(latitude: 59.89444, longitude: 30.26417), animation: .linear)
+        mapView.set(geoCenter: NMAGeoCoordinates(latitude: 59.94177171979458, longitude: 30.315999984741207), animation: .linear)
         mapView.copyrightLogoPosition = NMALayoutPosition.bottomCenter
         
         if NMAPositioningManager.sharedInstance().startPositioning() {
@@ -132,7 +132,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, NMAMapViewDelegate, UI
     
     func openBank () {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "TerminalVC") as! TerminalVC
-        vc.location = LocationModel(JSONString: "{\"id\":23,\"name\":\"SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)\",\"latitude\":59.95247471691382,\"longitude\":30.299606323242188,\"bank_name\":\"\",\"type\":\"Снятие наличных;\",\"work_time\":\"с 10:00 до 22:57\",\"currency\":\"RUB;\",\"cashless\":false,\"is_merchant\":false,\"address\":\"Лиговский проспект, 30А, этаж 1, Возле магазина: Zara;\",\"bank_id\":4}")
+        vc.location = LocationModel(JSONString: "{\"id\":23,\"name\":\"SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)\",\"latitude\":59.95247471691382,\"longitude\":30.299606323242188,\"bank_name\":\"\",\"type\":\"Снятие наличных;\",\"work_time\":\"с 10:00 до 22:57\",\"currency\":\"RUB\",\"cashless\":false,\"is_merchant\":false,\"address\":\"Лиговский проспект, 30А, этаж 1, Возле магазина: Zara\",\"bank_id\":4}")
         //        vc.user = data[indexPath.row]
         //        vc.doneCount = user.doneCount
         //        vc.rating = user.rating

@@ -66,6 +66,11 @@ class GetMoney: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else {
             cell.accessoryType = .none
         }
+        if card.cardType == "Gold" {
+            cell.imagePic.image = #imageLiteral(resourceName: "card_gold")
+        } else {
+            cell.imagePic.image = #imageLiteral(resourceName: "card_default")
+        }
         return cell
     }
     
