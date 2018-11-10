@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "Expiry"; ObjectID = "0Bo-k7-vhB"; */
+"0Bo-k7-vhB.text" = "Expiry";
+
+/* Class = "UISegmentedControl"; 0GF-Kk-b7g.segmentTitles[0] = "₽"; ObjectID = "0GF-Kk-b7g"; */
+"0GF-Kk-b7g.segmentTitles[0]" = "₽";
+
+/* Class = "UISegmentedControl"; 0GF-Kk-b7g.segmentTitles[1] = "$"; ObjectID = "0GF-Kk-b7g"; */
+"0GF-Kk-b7g.segmentTitles[1]" = "$";
+
+/* Class = "UISegmentedControl"; 0GF-Kk-b7g.segmentTitles[2] = "€"; ObjectID = "0GF-Kk-b7g"; */
+"0GF-Kk-b7g.segmentTitles[2]" = "€";
+
+/* Class = "UISegmentedControl"; 0ef-Gi-KnJ.segmentTitles[0] = "₽"; ObjectID = "0ef-Gi-KnJ"; */
+"0ef-Gi-KnJ.segmentTitles[0]" = "₽";
+
+/* Class = "UISegmentedControl"; 0ef-Gi-KnJ.segmentTitles[1] = "$"; ObjectID = "0ef-Gi-KnJ"; */
+"0ef-Gi-KnJ.segmentTitles[1]" = "$";
+
+/* Class = "UISegmentedControl"; 0ef-Gi-KnJ.segmentTitles[2] = "€"; ObjectID = "0ef-Gi-KnJ"; */
+"0ef-Gi-KnJ.segmentTitles[2]" = "€";
+
+/* Class = "UIBarButtonItem"; title = "+"; ObjectID = "54a-dY-zd7"; */
+"54a-dY-zd7.title" = "+";
+
+/* Class = "UILabel"; text = "Выберите счет карты"; ObjectID = "7ah-CM-vkn"; */
+"7ah-CM-vkn.text" = "Выберите счет карты";
+
+/* Class = "UILabel"; text = "5432     111**     ****     ****"; ObjectID = "Aau-Fc-qwT"; */
+"Aau-Fc-qwT.text" = "5432     111**     ****     ****";
+
+/* Class = "UINavigationItem"; title = "Снять наличные"; ObjectID = "Kjo-2B-Y0X"; */
+"Kjo-2B-Y0X.title" = "Снять наличные";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SiF-MG-GeP"; */
+"SiF-MG-GeP.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Мои карты"; ObjectID = "ZKV-DK-MQH"; */
+"ZKV-DK-MQH.title" = "Мои карты";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cKJ-C5-k5M"; */
+"cKJ-C5-k5M.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Мои карты"; ObjectID = "d2P-va-8w9"; */
+"d2P-va-8w9.title" = "Мои карты";
+
+/* Class = "UILabel"; text = "Выберите карту"; ObjectID = "eyB-ur-3WL"; */
+"eyB-ur-3WL.text" = "Выберите карту";
+
+/* Class = "UITabBarItem"; title = "Банкоматы"; ObjectID = "jy7-Sx-wZT"; */
+"jy7-Sx-wZT.title" = "Банкоматы";
+
+/* Class = "UILabel"; text = "₽"; ObjectID = "l4v-Qp-flB"; */
+"l4v-Qp-flB.text" = "₽";
+
+/* Class = "UINavigationItem"; title = "Банкоматы"; ObjectID = "oQ8-A2-q98"; */
+"oQ8-A2-q98.title" = "Банкоматы";
+
+/* Class = "UILabel"; text = "05 / 2024"; ObjectID = "rc0-mX-NdJ"; */
+"rc0-mX-NdJ.text" = "05 / 2024";
+
+/* Class = "UILabel"; text = "Credit Bank of Moscow"; ObjectID = "sNd-B1-Muk"; */
+"sNd-B1-Muk.text" = "Credit Bank of Moscow";
+
+/* Class = "UITabBarItem"; title = "Снять наличные"; ObjectID = "sRv-QB-Nvb"; */
+"sRv-QB-Nvb.title" = "Снять наличные";
+
+/* Class = "UILabel"; text = "Выберите валюту для снятия"; ObjectID = "teu-2o-6qq"; */
+"teu-2o-6qq.text" = "Выберите валюту для снятия";
+
+/* Class = "UILabel"; text = "Информировать о найденном банкомате"; ObjectID = "xlM-Jn-BB3"; */
+"xlM-Jn-BB3.text" = "Информировать о найденном банкомате";

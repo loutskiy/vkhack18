@@ -14,6 +14,11 @@ target 'VKHackathon' do
   pod 'AlamofireObjectMapper'
   # Pods for VKHackathon
 end
+target 'SiriIntent' do
+  use_frameworks!
+  pod 'RealmSwift'
+end
+
 target 'OneSignalNotificationServiceExtension' do
   use_frameworks!
   pod 'OneSignal', '>= 2.6.2', '< 3.0'

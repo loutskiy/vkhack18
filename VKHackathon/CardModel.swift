@@ -13,4 +13,5 @@ class CardModel: Object {
     @objc dynamic var bankName = ""
     @objc dynamic var cardId = ""
     @objc dynamic var cardExpire = ""
+    @objc dynamic var cardType = ""
 }

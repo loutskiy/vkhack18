@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Intents
 
 class MyCardsVC: UITableViewController {
     
@@ -15,6 +16,10 @@ class MyCardsVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationTrackerSingleton.shared.sendingToServer()
+        setupIntents()
+        INPreferences.requestSiriAuthorization { (status) in
+        }
         self.tableView.tableFooterView = UIView()
         cards = realm.objects(CardModel.self)
         // Uncomment the following line to preserve selection between presentations
@@ -22,6 +27,17 @@ class MyCardsVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func setupIntents() {
+        let activity = NSUserActivity(activityType: "ru.lwts.VKHackathon.SiriShourtcuts.say") // 1
+        activity.title = "Say Hi" // 2
+        activity.userInfo = ["speech" : "hi"] // 3
+        activity.isEligibleForSearch = true // 4
+        activity.isEligibleForPrediction = true // 5
+        activity.persistentIdentifier = "ru.lwts.VKHackathon.SiriShourtcuts.say" // 6
+        view.userActivity = activity // 7
+        activity.becomeCurrent() // 8
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,9 +54,12 @@ class MyCardsVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let card = cards![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardCell
-        cell.cardNumberLabel.text = card.cardId
+        cell.cardNumberLabel.text = card.cardId.inserting(separator: "    ", every: 4)
         cell.expiryLabel.text = card.cardExpire
-
+        cell.bankLabel.text = Banks.banks[card.bankName]?.name ?? ""
+        if card.cardType == "Gold" {
+            cell.cardHoldImage.image = #imageLiteral(resourceName: "card_gold")
+        }
         // Configure the cell...
 
         return cell
@@ -90,5 +109,10 @@ class MyCardsVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    public func sayHi() {
+        let alert = UIAlertController(title: "Hi There!", message: "Hey there! Glad to see you got this working!", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

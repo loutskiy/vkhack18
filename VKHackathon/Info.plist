@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Банкомат</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,10 +22,33 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GPS</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>GPS</string>
+	<key>NSLocationUsageDescription</key>
+	<string>GPS</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GPS</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Siri</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string></string>
+		<string>FindAtmIntent</string>
+		<string>Intents</string>
+		<string>ru.lwts.VKHackathon.SiriShourtcuts.say</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

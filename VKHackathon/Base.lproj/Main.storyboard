@@ -57,20 +57,23 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05 / 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-mX-NdJ">
-                                                    <rect key="frame" x="272" y="126" width="55" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05 / 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-mX-NdJ">
+                                                    <rect key="frame" x="249" y="126" width="78" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="78" id="Sfr-Th-n4g"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Bank of Moscow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNd-B1-Muk">
-                                                    <rect key="frame" x="16" y="126" width="175" height="21"/>
+                                                    <rect key="frame" x="16" y="126" width="225" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-k7-vhB">
-                                                    <rect key="frame" x="272" y="106" width="33" height="14"/>
+                                                    <rect key="frame" x="249" y="106" width="33" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.55686274509803924" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -94,6 +97,7 @@
                                                 <constraint firstItem="hUu-lA-TGr" firstAttribute="leading" secondItem="iCL-v4-hdC" secondAttribute="leading" id="Swn-ni-3ZG"/>
                                                 <constraint firstItem="sNd-B1-Muk" firstAttribute="leading" secondItem="iCL-v4-hdC" secondAttribute="leading" constant="16" id="W3L-wM-ix4"/>
                                                 <constraint firstItem="hUu-lA-TGr" firstAttribute="top" secondItem="iCL-v4-hdC" secondAttribute="top" id="cM3-1a-iAQ"/>
+                                                <constraint firstItem="rc0-mX-NdJ" firstAttribute="leading" secondItem="sNd-B1-Muk" secondAttribute="trailing" constant="8" id="kV2-yC-uel"/>
                                                 <constraint firstItem="Aau-Fc-qwT" firstAttribute="centerY" secondItem="iCL-v4-hdC" secondAttribute="centerY" id="otd-j6-E0F"/>
                                                 <constraint firstItem="l4v-Qp-flB" firstAttribute="top" secondItem="iCL-v4-hdC" secondAttribute="top" constant="8" id="rOT-4K-wFW"/>
                                                 <constraint firstItem="rc0-mX-NdJ" firstAttribute="top" secondItem="0Bo-k7-vhB" secondAttribute="bottom" constant="6" id="rii-y3-wgZ"/>
@@ -117,6 +121,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bankLabel" destination="sNd-B1-Muk" id="DgQ-Kb-zF4"/>
+                                    <outlet property="cardHoldImage" destination="hUu-lA-TGr" id="2LQ-4e-PCh"/>
                                     <outlet property="cardNumberLabel" destination="Aau-Fc-qwT" id="k34-t6-nUR"/>
                                     <outlet property="currencyLabel" destination="l4v-Qp-flB" id="ycP-gJ-YY3"/>
                                     <outlet property="expiryLabel" destination="rc0-mX-NdJ" id="EQI-T5-ydA"/>
@@ -149,8 +154,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите счет карты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-CM-vkn">
+                                <rect key="frame" x="16" y="132" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-Gi-KnJ">
+                                <rect key="frame" x="16" y="172" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="veT-13-PDW"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="₽"/>
+                                    <segment title="$"/>
+                                    <segment title="€"/>
+                                </segments>
+                                <color key="tintColor" red="0.090196078430000007" green="0.14117647059999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiF-MG-GeP">
-                                <rect key="frame" x="16" y="79" width="343" height="30"/>
+                                <rect key="frame" x="16" y="559" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -159,6 +182,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AxJ-K8-Dzb" firstAttribute="trailing" secondItem="0ef-Gi-KnJ" secondAttribute="trailing" constant="16" id="3Q3-YZ-IAi"/>
+                            <constraint firstItem="AxJ-K8-Dzb" firstAttribute="trailing" secondItem="7ah-CM-vkn" secondAttribute="trailing" constant="16" id="EBL-Hx-KiL"/>
+                            <constraint firstItem="7ah-CM-vkn" firstAttribute="top" secondItem="AxJ-K8-Dzb" secondAttribute="top" constant="16" id="LAs-O7-q1z"/>
+                            <constraint firstItem="7ah-CM-vkn" firstAttribute="leading" secondItem="AxJ-K8-Dzb" secondAttribute="leading" constant="16" id="Ota-bf-hzF"/>
+                            <constraint firstItem="0ef-Gi-KnJ" firstAttribute="top" secondItem="7ah-CM-vkn" secondAttribute="bottom" constant="16" id="gEH-Jy-iJr"/>
+                            <constraint firstItem="0ef-Gi-KnJ" firstAttribute="leading" secondItem="AxJ-K8-Dzb" secondAttribute="leading" constant="16" id="nCd-ZY-laA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AxJ-K8-Dzb"/>
                     </view>
                 </viewController>
@@ -172,8 +203,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfK-65-oEw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои карты" image="credit-card" id="d2P-va-8w9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="paz-DZ-4vM">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="paz-DZ-4vM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.089187092509328436" green="0.140260796802363" blue="0.2165641191709845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -190,14 +221,43 @@
         <!--Банкоматы-->
         <scene sceneID="3Fu-0y-PQ1">
             <objects>
-                <viewController id="wYa-Rl-BV6" sceneMemberID="viewController">
+                <viewController id="wYa-Rl-BV6" customClass="MapVC" customModule="VKHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N1n-ip-OtH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scw-cL-aqf" customClass="NMAMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJR-1H-9Oi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="132" id="cmH-f1-Weh"/>
+                                        </constraints>
+                                    </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kms-JU-OXi">
+                                        <rect key="frame" x="16" y="80" width="343" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="bvu-rY-X1e"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Все"/>
+                                            <segment title="Банкоматы"/>
+                                            <segment title="Магазины"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </segmentedControl>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kms-JU-OXi" firstAttribute="leading" secondItem="scw-cL-aqf" secondAttribute="leading" constant="16" id="1dN-RA-iGl"/>
+                                    <constraint firstItem="gJR-1H-9Oi" firstAttribute="top" secondItem="scw-cL-aqf" secondAttribute="top" id="4BC-xH-QW1"/>
+                                    <constraint firstItem="gJR-1H-9Oi" firstAttribute="leading" secondItem="scw-cL-aqf" secondAttribute="leading" id="9JZ-O7-2HH"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJR-1H-9Oi" secondAttribute="trailing" id="VGU-La-aQi"/>
+                                    <constraint firstAttribute="trailing" secondItem="kms-JU-OXi" secondAttribute="trailing" constant="16" id="mwc-t3-KN5"/>
+                                    <constraint firstItem="kms-JU-OXi" firstAttribute="top" secondItem="scw-cL-aqf" secondAttribute="top" constant="80" id="sjr-9w-f1p"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,6 +270,9 @@
                         <viewLayoutGuide key="safeArea" id="A4q-Xb-eCA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Банкоматы" id="oQ8-A2-q98"/>
+                    <connections>
+                        <outlet property="mapView" destination="scw-cL-aqf" id="jXA-5n-v6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxN-5p-b6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,6 +284,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nXV-GH-DQg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S7P-io-sjx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,14 +303,131 @@
         <!--Снять наличные-->
         <scene sceneID="Xvv-yv-4b1">
             <objects>
-                <viewController id="5K3-fQ-1m4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetMoney" id="5K3-fQ-1m4" customClass="GetMoney" customModule="VKHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ub7-hK-unS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту для снятия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teu-2o-6qq">
+                                <rect key="frame" x="16" y="132" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите карту" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-ur-3WL">
+                                <rect key="frame" x="16" y="233" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0GF-Kk-b7g">
+                                <rect key="frame" x="16" y="172" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Wv2-6Y-kfe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="₽"/>
+                                    <segment title="$"/>
+                                    <segment title="€"/>
+                                </segments>
+                                <color key="tintColor" red="0.090196078431372548" green="0.14117647058823529" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hT4-PW-MeI">
+                                <rect key="frame" x="0.0" y="273" width="375" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="3nn-Nm-zlS"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="pwa-J4-rJd" customClass="GetMoneyCell" customModule="VKHackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pwa-J4-rJd" id="AQA-Pg-IU9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_gold" translatesAutoresizingMaskIntoConstraints="NO" id="OYx-GM-5y2">
+                                                    <rect key="frame" x="15" y="11" width="35" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="04O-ko-otK"/>
+                                                        <constraint firstAttribute="height" constant="22" id="2aJ-u7-7Ay"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKJ-C5-k5M">
+                                                    <rect key="frame" x="58" y="11" width="42" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="BNa-QC-qU5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OYx-GM-5y2" firstAttribute="top" secondItem="AQA-Pg-IU9" secondAttribute="topMargin" id="DJM-uf-2vh"/>
+                                                <constraint firstItem="cKJ-C5-k5M" firstAttribute="top" secondItem="AQA-Pg-IU9" secondAttribute="topMargin" id="bMF-tM-WUX"/>
+                                                <constraint firstItem="cKJ-C5-k5M" firstAttribute="bottom" secondItem="AQA-Pg-IU9" secondAttribute="bottomMargin" id="iXB-P9-1v6"/>
+                                                <constraint firstItem="cKJ-C5-k5M" firstAttribute="leading" secondItem="OYx-GM-5y2" secondAttribute="trailing" constant="8" id="kPa-fH-b3j"/>
+                                                <constraint firstItem="OYx-GM-5y2" firstAttribute="leading" secondItem="AQA-Pg-IU9" secondAttribute="leadingMargin" id="xtL-hZ-Lmd"/>
+                                                <constraint firstItem="OYx-GM-5y2" firstAttribute="bottom" secondItem="AQA-Pg-IU9" secondAttribute="bottomMargin" id="zZo-FF-NdP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagePic" destination="OYx-GM-5y2" id="N9b-qa-MCL"/>
+                                            <outlet property="titleField" destination="cKJ-C5-k5M" id="Oef-3F-5ji"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yes-zU-ZUc">
+                                <rect key="frame" x="310" y="469" width="51" height="31"/>
+                                <color key="onTintColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="changeTracking:" destination="5K3-fQ-1m4" eventType="valueChanged" id="QrI-Nq-94R"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информировать о найденном банкомате" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlM-Jn-BB3">
+                                <rect key="frame" x="16" y="469" width="286" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="r6j-01-1Qy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hT4-PW-MeI" firstAttribute="trailing" secondItem="ilm-ib-GGX" secondAttribute="trailing" id="3Zu-Kh-WA4"/>
+                            <constraint firstItem="0GF-Kk-b7g" firstAttribute="top" secondItem="teu-2o-6qq" secondAttribute="bottom" constant="16" id="6hb-ZY-eMn"/>
+                            <constraint firstItem="0GF-Kk-b7g" firstAttribute="leading" secondItem="ilm-ib-GGX" secondAttribute="leading" constant="16" id="7Ib-Sq-2vV"/>
+                            <constraint firstItem="yes-zU-ZUc" firstAttribute="leading" secondItem="xlM-Jn-BB3" secondAttribute="trailing" constant="8" id="Jgd-ef-aM8"/>
+                            <constraint firstItem="teu-2o-6qq" firstAttribute="top" secondItem="ilm-ib-GGX" secondAttribute="top" constant="16" id="MNL-cX-GtQ"/>
+                            <constraint firstItem="ilm-ib-GGX" firstAttribute="trailing" secondItem="eyB-ur-3WL" secondAttribute="trailing" constant="16" id="U62-Ux-h7T"/>
+                            <constraint firstItem="yes-zU-ZUc" firstAttribute="top" secondItem="hT4-PW-MeI" secondAttribute="bottom" constant="16" id="VCp-Jc-mEh"/>
+                            <constraint firstItem="eyB-ur-3WL" firstAttribute="leading" secondItem="ilm-ib-GGX" secondAttribute="leading" constant="16" id="WcM-Qe-No3"/>
+                            <constraint firstItem="eyB-ur-3WL" firstAttribute="top" secondItem="0GF-Kk-b7g" secondAttribute="bottom" constant="16" id="bvP-FI-Tja"/>
+                            <constraint firstItem="xlM-Jn-BB3" firstAttribute="top" secondItem="hT4-PW-MeI" secondAttribute="bottom" constant="16" id="f0C-vx-H8P"/>
+                            <constraint firstItem="ilm-ib-GGX" firstAttribute="trailing" secondItem="yes-zU-ZUc" secondAttribute="trailing" constant="16" id="g4y-Q7-dlP"/>
+                            <constraint firstItem="teu-2o-6qq" firstAttribute="leading" secondItem="ilm-ib-GGX" secondAttribute="leading" constant="16" id="oKO-G4-f9o"/>
+                            <constraint firstItem="ilm-ib-GGX" firstAttribute="trailing" secondItem="0GF-Kk-b7g" secondAttribute="trailing" constant="16" id="smH-Er-w5Q"/>
+                            <constraint firstItem="hT4-PW-MeI" firstAttribute="leading" secondItem="ilm-ib-GGX" secondAttribute="leading" id="uHj-32-wZV"/>
+                            <constraint firstItem="xlM-Jn-BB3" firstAttribute="leading" secondItem="ilm-ib-GGX" secondAttribute="leading" constant="16" id="uTx-Uv-zux"/>
+                            <constraint firstItem="hT4-PW-MeI" firstAttribute="top" secondItem="eyB-ur-3WL" secondAttribute="bottom" constant="16" id="xTj-Mo-Tl4"/>
+                            <constraint firstItem="ilm-ib-GGX" firstAttribute="trailing" secondItem="teu-2o-6qq" secondAttribute="trailing" constant="16" id="zpf-dP-Dqo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ilm-ib-GGX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Снять наличные" id="Kjo-2B-Y0X"/>
+                    <connections>
+                        <outlet property="currencySegment" destination="0GF-Kk-b7g" id="fj0-6c-hkr"/>
+                        <outlet property="tableView" destination="hT4-PW-MeI" id="adK-CI-h1C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAB-Qb-IUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,9 +439,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nKY-xB-9Ws" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Банкоматы" image="map" id="jy7-Sx-wZT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="99V-Sg-g1i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="99V-Sg-g1i">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -277,9 +459,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yLd-kr-Hm3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Снять наличные" image="money" id="sRv-QB-Nvb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wy0-c9-LdP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="wy0-c9-LdP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.089187092509999996" green="0.1402607968" blue="0.21656411919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -294,6 +477,7 @@
     <resources>
         <image name="add" width="20" height="20"/>
         <image name="card_default" width="594" height="364"/>
+        <image name="card_gold" width="594" height="364"/>
         <image name="credit-card" width="24" height="19"/>
         <image name="map" width="24" height="19"/>
         <image name="mastercard" width="73" height="60"/>

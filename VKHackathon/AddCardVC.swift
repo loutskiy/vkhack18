@@ -16,12 +16,15 @@ class AddCardVC: UIViewController, CardIOPaymentViewControllerDelegate {
     
     func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
         if let info = cardInfo {
-            let card = CardModel()
-            card.bankName = ""
-            card.cardExpire = "\(info.expiryMonth)/\(info.expiryYear)"
-            card.cardId = info.cardNumber
-            try! realm.write {
-                realm.add(card)
+            ServerManager.getBinFromCardNumber(info.cardNumber) { (bin) in
+                let card = CardModel()
+                card.bankName = (bin.bank?.name)!
+                card.cardExpire = "\(info.expiryMonth)/\(info.expiryYear)"
+                card.cardId = info.cardNumber
+                card.cardType = bin.brand ?? "Standart"
+                try! realm.write {
+                    realm.add(card)
+                }
             }
 //            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n %@", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cardImage)
 //            print(str)
@@ -32,14 +35,15 @@ class AddCardVC: UIViewController, CardIOPaymentViewControllerDelegate {
     
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        self.title = "Добавить карту"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func scanCard(_ sender: Any) {
         let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
         cardIOVC?.collectCVV = false
+        cardIOVC?.hideCardIOLogo = true
         cardIOVC!.modalPresentationStyle = .formSheet
         present(cardIOVC!, animated: true, completion: nil)
     }

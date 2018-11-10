@@ -15,6 +15,7 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var bankLabel: UILabel!
     @IBOutlet weak var expiryLabel: UILabel!
     @IBOutlet weak var viewCard: UIView!
+    @IBOutlet weak var cardHoldImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
