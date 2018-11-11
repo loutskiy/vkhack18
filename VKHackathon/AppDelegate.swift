@@ -33,10 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
         
+        let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+                let window = self.window
+            let rootViewController = window!.rootViewController as? UITabBarController
+            print("go")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+            (rootViewController!.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
+            vc.openBank()
+        }
+        
         // Replace 'YOUR_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
                                         appId: "fde22b87-44a3-44af-8020-d8c5f8e4ca42",
-                                        handleNotificationAction: nil,
+                                        handleNotificationAction: notificationOpenedBlock,
                                         settings: onesignalInitSettings)
         
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
