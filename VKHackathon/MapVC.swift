@@ -150,6 +150,27 @@ class MapVC: UIViewController, CLLocationManagerDelegate, NMAMapViewDelegate, UI
         
         present(nav, animated: true, completion: nil)
     }
+    
+    func openBank2 () {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TerminalVC") as! TerminalVC
+        vc.location = LocationModel(JSONString: "{\"id\":23,\"name\":\"SAVINGS BANK OF THE RUSSIAN FEDERATION (SBERBANK)\",\"latitude\":59.95247471691382,\"longitude\":30.299606323242188,\"bank_name\":\"\",\"type\":\"Снятие наличных;\",\"work_time\":\"с 10:00 до 22:57\",\"currency\":\"RUB\",\"cashless\":false,\"is_merchant\":true,\"address\":\"Лиговский проспект, 30А, этаж 1, Возле магазина: Zara\",\"bank_id\":4}")
+        //        vc.user = data[indexPath.row]
+        //        vc.doneCount = user.doneCount
+        //        vc.rating = user.rating
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .popover
+        //print(self.view.frame.size.width)
+        //print(self.view.frame.size.height)
+        nav.preferredContentSize = CGSize(width: self.view.frame.size.width - 20, height: self.view.frame.size.height - 50)
+        
+        let ppc = nav.popoverPresentationController
+        ppc?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+        ppc?.delegate = self
+        ppc?.sourceView = self.view
+        
+        present(nav, animated: true, completion: nil)
+    }
 
     @IBAction func changeAtmType(_ sender: UISegmentedControl) {
         getAllLocations()

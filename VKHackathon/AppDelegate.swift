@@ -34,15 +34,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
         
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
-            NotificationTrackerSingleton.shared.isTrackLocation = false
-            NotificationTrackerSingleton.shared.sendingToServer()
-                let window = self.window
-            let rootViewController = window!.rootViewController as? UITabBarController
-            print("go")
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
-            (rootViewController!.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
-            vc.openBank()
+//            let payload: OSNotificationPayload? = result?.notification.payload
+            
+            if let additionalData = result!.notification.payload!.additionalData {
+                print(result!.notification.payload!.additionalData)
+                if additionalData["is_merchant"] as! Bool {
+                    NotificationTrackerSingleton.shared.isTrackLocation = false
+                    NotificationTrackerSingleton.shared.sendingToServer()
+                    let window = self.window
+                    let rootViewController = window!.rootViewController as? UITabBarController
+                    print("go")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+                    (rootViewController!.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
+                    vc.openBank2()
+                } else {
+                    NotificationTrackerSingleton.shared.isTrackLocation = false
+                    NotificationTrackerSingleton.shared.sendingToServer()
+                    let window = self.window
+                    let rootViewController = window!.rootViewController as? UITabBarController
+                    print("go")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+                    (rootViewController!.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
+                    vc.openBank()
+                }
+            } else {
+                NotificationTrackerSingleton.shared.isTrackLocation = false
+                NotificationTrackerSingleton.shared.sendingToServer()
+                    let window = self.window
+                let rootViewController = window!.rootViewController as? UITabBarController
+                print("go")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+                (rootViewController!.selectedViewController as! UINavigationController).pushViewController(vc, animated: true)
+                vc.openBank()
+            }
         }
         
         // Replace 'YOUR_APP_ID' with your OneSignal App ID.
