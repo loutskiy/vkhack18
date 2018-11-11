@@ -44,19 +44,25 @@ class NotificationTrackerSingleton: NSObject, CLLocationManagerDelegate {
     
     func sendingToServer() {
         if isTrackLocation {
-            let params: Parameters = [
-                "bank": bank,
-                "currency": currency,
-                "latitude": locationManager.location?.coordinate.latitude ?? 0.0,
-                "longitude": locationManager.location?.coordinate.longitude ?? 0.0
-            ]
-            print(params)
-            Alamofire.request(URL(string: "http://ss.bigbadbird.ru/api/ATMNearby")!, method: .post, parameters: params, encoding: JSONEncoding.default).response { (response) in
-                print(response)
-                //sleep(5)
-                self.sendingToServer()
+            Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { (timer) in
+                if self.isTrackLocation {
+                    let params: Parameters = [
+                        "bank": self.bank,
+                        "currency": self.currency ?? "USD",
+                        "latitude": self.locationManager.location?.coordinate.latitude ?? 0.0,
+                        "longitude": self.locationManager.location?.coordinate.longitude ?? 0.0
+                    ]
+                    print(params)
+                    Alamofire.request(URL(string: "http://ss.bigbadbird.ru/api/ATMNearby")!, method: .post, parameters: params, encoding: JSONEncoding.default).response { (response) in
+                        print(response)
+                        //sleep(5)
+                        self.sendingToServer()
+                    }
+                }
             }
+            
         }
     }
     
+
 }
