@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
         
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+            NotificationTrackerSingleton.shared.isTrackLocation = false
+            NotificationTrackerSingleton.shared.sendingToServer()
                 let window = self.window
             let rootViewController = window!.rootViewController as? UITabBarController
             print("go")
